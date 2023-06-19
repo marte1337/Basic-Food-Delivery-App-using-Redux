@@ -1,58 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+import { useGetAllProductsQuery } from "./features/api/apiSlice";
+import Header from "./components/Header";
+import BottomNavigation from "./components/BottomNavigation";
+import ProductCard from "./components/productcard/ProductCard";
+import ShoppingCart from "./components/shoppingcart/ShoppingCart";
+import "./App.css";
 
-function App() {
+export default function App() {
+  const { data, error, isLoading, isError } = useGetAllProductsQuery();
+  const [visibleProducts, setVisibleProducts] = useState(5);
+
+  const handleShowMoreProducts = () => {
+    setVisibleProducts((prevState) => (prevState += 5));
+  };
+
+  console.log(data);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Header />
+      <main className="App-main">
+        <section className="product-section">
+          <h2>Products:</h2>
+          {isError ? (
+            <>{error.error}</>
+          ) : isLoading ? (
+            <>Loading...</>
+          ) : data ? (
+            data
+              .slice(0, visibleProducts)
+              .map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))
+          ) : null}
+          {data?.length > visibleProducts && (
+            <button onClick={handleShowMoreProducts}>Show more</button>
+          )}
+        </section>
+        <section className="cart-section">
+          <h2>Shopping Cart:</h2>
+          <ShoppingCart />
+        </section>
+      </main>
+      <BottomNavigation />
     </div>
   );
 }
-
-export default App;

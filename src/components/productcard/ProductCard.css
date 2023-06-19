@@ -1,0 +1,14 @@
+.product-card {
+  max-width: 300px;
+  border-radius: 15px;
+  background-color: #ef4444;
+  color: white;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.product-card ul {
+  list-style: none;
+  text-align: left;
+  padding-left: 20px;
+}

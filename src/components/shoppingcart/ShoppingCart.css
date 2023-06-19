@@ -1,0 +1,16 @@
+.shopping-cart__item {
+  max-width: 300px;
+  border-radius: 15px;
+  background-color: #ef4444;
+  color: white;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.shopping-cart__item ul {
+  margin-bottom: 10px;
+  padding: 0;
+}
+.shopping-cart__item li {
+  list-style: none;
+}

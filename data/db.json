@@ -1,0 +1,157 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "pizza",
+      "price": 12,
+      "ingredients": ["dough", "tomato sauce", "cheese", "pepperoni"]
+    },
+    {
+      "id": 2,
+      "name": "hamburger",
+      "price": 8,
+      "ingredients": [
+        "bun",
+        "beef patty",
+        "lettuce",
+        "tomato",
+        "onion",
+        "cheese",
+        "pickles"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "sushi",
+      "price": 15,
+      "ingredients": [
+        "rice",
+        "nori seaweed",
+        "fish (salmon, tuna, etc.)",
+        "avocado",
+        "soy sauce",
+        "wasabi",
+        "pickled ginger"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "pasta",
+      "price": 10,
+      "ingredients": [
+        "spaghetti",
+        "tomato sauce",
+        "garlic",
+        "olive oil",
+        "parmesan cheese",
+        "basil"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "salad",
+      "price": 6,
+      "ingredients": [
+        "lettuce",
+        "cucumber",
+        "tomato",
+        "onion",
+        "olive oil",
+        "vinegar",
+        "salt",
+        "pepper"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "sushi roll",
+      "price": 9,
+      "ingredients": [
+        "sushi rice",
+        "nori seaweed",
+        "fish (salmon, tuna, etc.)",
+        "avocado",
+        "cucumber",
+        "soy sauce",
+        "wasabi",
+        "pickled ginger"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "steak",
+      "price": 20,
+      "ingredients": [
+        "beef steak",
+        "salt",
+        "black pepper",
+        "butter",
+        "garlic",
+        "rosemary"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "pancakes",
+      "price": 7,
+      "ingredients": [
+        "flour",
+        "milk",
+        "eggs",
+        "sugar",
+        "baking powder",
+        "butter",
+        "maple syrup"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "sushi bowl",
+      "price": 13,
+      "ingredients": [
+        "sushi rice",
+        "nori seaweed",
+        "fish (salmon, tuna, etc.)",
+        "avocado",
+        "carrots",
+        "cucumber",
+        "edamame",
+        "soy sauce"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "chicken curry",
+      "price": 11,
+      "ingredients": [
+        "chicken",
+        "onion",
+        "garlic",
+        "ginger",
+        "coconut milk",
+        "curry powder",
+        "vegetables"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "ice cream",
+      "price": 5,
+      "ingredients": ["milk", "cream", "sugar", "vanilla extract"]
+    },
+    {
+      "id": 12,
+      "name": "tacos",
+      "price": 9,
+      "ingredients": [
+        "tortillas",
+        "ground beef",
+        "lettuce",
+        "tomato",
+        "onion",
+        "cheese",
+        "salsa"
+      ]
+    }
+  ]
+}
